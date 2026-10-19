@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101016">
+  <meta name="description" content="Generate rare, short Instagram username ideas and check public profile hints.">
+  <title>RareHandle — Username Hunter</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <main class="shell">
+    <header class="topbar">
+      <a class="brand" href="#top" aria-label="RareHandle home"><span class="brand-mark">R</span><span>rarehandle<span class="brand-dot">.</span></span></a>
+      <span class="version">BETA · 01</span>
+    </header>
+
+    <section class="hero" id="top">
+      <div class="eyebrow"><span class="live-dot"></span> SHORT-HANDLE LAB</div>
+      <h1>Small name.<br><span>Big energy.</span></h1>
+      <p class="intro">Hunt for a clean 3–5 character handle. Generate ten ideas, copy your favorites, then check for public-profile clues.</p>
+    </section>
+
+    <section class="panel controls" aria-labelledby="controls-title">
+      <div class="panel-heading">
+        <div><p class="section-label">01 / CONFIGURE</p><h2 id="controls-title">Your search</h2></div>
+        <span class="tiny-chip">10 names / round</span>
+      </div>
+      <div class="control-grid">
+        <label class="field"><span>Length</span><select id="length"><option value="3">3 characters</option><option value="4" selected>4 characters</option><option value="5">5 characters</option></select></label>
+        <label class="field"><span>Style</span><select id="style"><option value="letters">Letters only</option><option value="digits">Letters + a digit</option><option value="symbols">Letters + dot / underscore</option></select></label>
+      </div>
+      <button class="primary-button" id="generate-btn" type="button"><span>Generate 10 usernames</span><span aria-hidden="true">↗</span></button>
+      <p class="microcopy">No login. No password. Just username ideas.</p>
+    </section>
+
+    <section class="results-section" aria-labelledby="results-title">
+      <div class="results-heading">
+        <div><p class="section-label">02 / DISCOVER</p><h2 id="results-title">Your shortlist <span id="count">0</span></h2></div>
+        <button class="text-button" id="copy-all-btn" type="button" disabled>Copy all ↗</button>
+      </div>
+      <div id="results" class="results-list" aria-live="polite">
+        <div class="empty-state"><span class="empty-icon">✳</span><strong>Your next handle is hiding here.</strong><p>Tap “Generate 10 usernames” to start hunting.</p></div>
+      </div>
+    </section>
+
+    <section class="panel checker" aria-labelledby="checker-title">
+      <div class="panel-heading">
+        <div><p class="section-label">03 / VERIFY</p><h2 id="checker-title">Check public profiles</h2></div>
+        <span class="tiny-chip muted-chip">Best-effort</span>
+      </div>
+      <p class="checker-copy">Checks the public Instagram profile page for clues. It cannot confirm that Instagram will let you register a handle; unavailable, reserved, blocked, or rate-limited pages can look similar.</p>
+      <button class="secondary-button" id="check-btn" type="button" disabled>Check these 10 profiles</button>
+      <p id="checker-status" class="status-line" role="status">Generate a shortlist first.</p>
+      <p class="disclaimer">Instagram’s official API does not offer a public username-availability endpoint. Treat results as hints and confirm in Instagram’s own username field before deciding.</p>
+    </section>
+
+    <footer class="footer"><span>MADE FOR THE HANDLE HUNT.</span><a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">Open Instagram ↗</a></footer>
+  </main>
+</body>
+</html>
