@@ -1,5 +1,5 @@
 /* Paste your deployed Cloudflare Worker URL below, then commit the change. */
-const API_BASE = "PASTE_CLOUDFLARE_WORKER_URL_HERE";
+const API_BASE = "https://rarehandle-checker.lolorhowizi.workers.dev/";
 
 const consonants = "bcdfghjklmnpqrstvwxz";
 const vowels = "aeiouy";
